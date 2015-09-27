@@ -11,6 +11,7 @@ Group:		System/Libraries
 Url:		https://gitlab.com/accounts-sso/libaccounts-qt
 Source0:	https://accounts-sso.googlecode.com/files/%{name}-%{version}.tar.bz2
 BuildRequires:	doxygen
+BuildRequires:  qt5-devel
 BuildRequires:	pkgconfig(libaccounts-glib)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5DBus)
