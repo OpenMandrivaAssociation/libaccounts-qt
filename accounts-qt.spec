@@ -5,7 +5,7 @@
 Summary:	Qt bindings for Accounts framework
 Name:		accounts-qt
 Version:	1.13
-Release:	2
+Release:	3
 License:	LGPLv2.1+
 Group:		System/Libraries
 Url:		https://gitlab.com/accounts-sso/libaccounts-qt
