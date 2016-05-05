@@ -75,10 +75,10 @@ Documentation for %{name}.
 %build
 %qmake_qt5 \
 	QMF_INSTALL_ROOT=%{_prefix} \
+	LIBDIR=%{_libdir} \
 	CONFIG+=release \
 	accounts-qt.pro
 %make
 
 %install
 make install INSTALL_ROOT=%{buildroot} STRIP=true
-
