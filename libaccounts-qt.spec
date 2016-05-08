@@ -42,6 +42,7 @@ Summary:	Development files for %{name}
 Group:		Development/KDE and Qt
 Requires:	%{libname} = %{EVRD}
 Provides:	%{name}-devel = %{EVRD}
+Provides:	accounts-qt = %{EVRD}
 
 %description -n %{devname}
 Development files for %{name}.
@@ -49,7 +50,7 @@ Development files for %{name}.
 %files -n %{devname}
 %{_bindir}/accountstest
 %{_datadir}/libaccounts-qt-tests
-%{_includedir}/%{name}5
+%{_includedir}/accounts-qt5
 %{_libdir}/libaccounts-qt5.so
 %{_libdir}/cmake/AccountsQt5
 %{_libdir}/pkgconfig/accounts-qt5.pc
@@ -68,7 +69,6 @@ Documentation for %{name}.
 %{_defaultdocdir}/accounts-qt/*
 
 #------------------------------------------------------------------------------
-
 
 %prep
 %setup -q
