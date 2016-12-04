@@ -4,7 +4,7 @@
 
 Summary:	Qt bindings for Accounts framework
 Name:		libaccounts-qt
-Version:	1.14
+Version:	1.15
 Release:	1
 License:	LGPLv2.1+
 Group:		System/Libraries
