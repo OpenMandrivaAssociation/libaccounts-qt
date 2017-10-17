@@ -49,7 +49,6 @@ Development files for %{name}.
 
 %files -n %{devname}
 %{_bindir}/accountstest
-%{_datadir}/libaccounts-qt-tests
 %{_includedir}/accounts-qt5
 %{_libdir}/libaccounts-qt5.so
 %{_libdir}/cmake/AccountsQt5
