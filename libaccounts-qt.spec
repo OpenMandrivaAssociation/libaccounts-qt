@@ -4,13 +4,12 @@
 
 Summary:	Qt bindings for Accounts framework
 Name:		libaccounts-qt
-Version:	1.15
-Release:	3
+Version:	1.16
+Release:	1
 License:	LGPLv2.1+
 Group:		System/Libraries
 Url:		https://gitlab.com/accounts-sso/libaccounts-qt
-# (tpg) wget https://gitlab.com/accounts-sso/libaccounts-qt/repository/archive.tar.bz2?ref=VERSION_1.14
-Source0:	https://accounts-sso.googlecode.com/files/%{name}-%{version}.tar.xz
+Source0:	https://gitlab.com/accounts-sso/libaccounts-qt/-/archive/VERSION_%{version}/libaccounts-qt-VERSION_%{version}.tar.bz2
 BuildRequires:	doxygen
 BuildRequires:  qt5-devel
 BuildRequires:	pkgconfig(libaccounts-glib)
@@ -70,7 +69,7 @@ Documentation for %{name}.
 #------------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -n %{name}-VERSION_%{version} -p1
 
 %build
 %qmake_qt5 \
