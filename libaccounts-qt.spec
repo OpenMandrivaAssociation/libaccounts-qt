@@ -67,7 +67,6 @@ Development files for %{name}.
 
 %if %{with qt5}
 %files -n %{devname}
-%{_bindir}/accountstest
 %{_includedir}/accounts-qt5
 %{_libdir}/libaccounts-qt5.so
 %{_libdir}/cmake/AccountsQt5
@@ -126,12 +125,13 @@ Documentation for %{name}.
 %prep
 %autosetup -n %{name}-VERSION_%{version} -p1
 echo 'INCLUDEPATH += ..' >>Accounts/Accounts.pro
+# tests are currently broken for qt6 (qmake not
+# knowing "testlib")
+sed -i -e 's, tests,,' *.pro
+
 mkdir -p qt5
 mv $(ls |grep -v qt5) qt5/
 cp -a qt5 qt6
-# tests are currently broken for qt6 (qmake not
-# knowing "testlib")
-sed -i -e 's, tests,,' qt6/*.pro
 find qt6 -name "*5*" |while read i; do
 	mv $i ${i/5/6}
 done
