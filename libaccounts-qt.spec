@@ -11,7 +11,7 @@
 Summary:	Qt bindings for Accounts framework
 Name:		libaccounts-qt
 Version:	1.16
-Release:	6
+Release:	7
 License:	LGPLv2.1+
 Group:		System/Libraries
 Url:		https://gitlab.com/accounts-sso/libaccounts-qt
@@ -169,7 +169,8 @@ mkdir -p %{buildroot}%{_libdir}/pkgconfig
 %if %{with qt5}
 make -C qt5 install INSTALL_ROOT=%{buildroot} STRIP=true
 cat >%{buildroot}%{_libdir}/pkgconfig/accounts-qt5.pc <<EOF
-Name: libaccounts-qt5
+Name: accounts-qt5
+Version: %{version}
 Description: Accounts Library
 Libs: -laccounts-qt5
 Requires: Qt5Core Qt5Xml
@@ -179,7 +180,8 @@ EOF
 %if %{with qt6}
 make -C qt6 install INSTALL_ROOT=%{buildroot} STRIP=true
 cat >%{buildroot}%{_libdir}/pkgconfig/accounts-qt6.pc <<EOF
-Name: libaccounts-qt6
+Name: accounts-qt6
+Version: %{version}
 Description: Accounts Library
 Libs: -laccounts-qt6
 Requires: Qt6Core Qt6Xml
